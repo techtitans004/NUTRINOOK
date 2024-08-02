@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form - NutriNook</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">NutriNook</div>
+      <ul class="navbar-menu">
+        <li class="navbar-item"><a href="index.html">Home</a></li>
+        <li class="navbar-item dropdown">
+          <a href="recipehome.html">Recipes</a>
+        </li>
+        <li class="navbar-item dropdown">
+          <a>Tools</a>
+          <ul class="dropdown-menu">
+            <li><a href="calocalc.html">Calorie Calculator</a></li>
+            <li><a href="bmicalc.html">BMI Calculator</a></li>
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="feedback.html">Feedback</a></li>
+      </ul>
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Recipe Feedback Form</h1>
+    </header>
+    <section class="feedback-form-container">
+      <form id="feedback-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating" required>
+            <option value="">Select a rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit Recipe Feedback</button>
+      </form>
+      <div id="thank-you-message" class="hidden">
+        <h2>Thank you for your precious feedback!</h2>
+        <button id="submit-another">Submit Another Recipe Feedback</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2024 NutriNook. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
