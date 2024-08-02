@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Navbar*/
+
+body {
+  background: #f8f9fa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #388e3c, #4caf50);
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-item {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.navbar-item a:hover {
+  background: #81c784;
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #81c784;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  background: #eee;
+}
+
+.navbar-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(45deg, #6ab04c, #badc58);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .navbar-item {
+    margin: 0;
+    text-align: right;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/*Homepage Content */
+
+.hero {
+  background-color: #5fdb63;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #6ab04c;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #f2f2f2;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+.feature {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff9900;
+  font-size: 30px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Footer CSS*/
+
+.footer {
+  background-color: #45a049;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/*Carousel CSS */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #a5d6a7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+  }
+  .carousel-button.left {
+    left: -10px;
+  }
+  .carousel-button.right {
+    right: -10px;
+  }
+}
+
+.footer {
+  background-color: #45a049;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+    margin: auto;
+  }
+
+  .carousel-control {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+/* Calculator CSS */
+
+.calculator {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: orange;
+  font-size: 35px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+#result {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/*Recipe Main Page CSS */
+.recipe-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recipe-header {
+  text-align: center;
+  color: orange;
+  padding: 0em 0;
+  margin-top: 25px;
+  font-size: 35px;
+}
+
+.recipe-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-info a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.recipes {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 0;
+}
+
+.recipe-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+  margin-top: 3em;
+  padding: 1em;
+  border: 1px solid green;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 10px 24px rgb(50, 211, 99);
+}
+
+.recipe-card img {
+  width: auto;
+  height: 250px;
+  margin: 0 1em;
+}
+
+.recipe-info {
+  max-width: 600px;
+}
+
+.recipe-info h2 {
+  color: orangered;
+  margin-bottom: 25px;
+}
+
+.recipe-card.type1 {
+  flex-direction: row;
+}
+
+.recipe-card.type2 {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .recipe-card {
+    flex-direction: column;
+  }
+
+  .recipe-card.type1,
+  .recipe-card.type2 {
+    flex-direction: column;
+  }
+
+  .recipe-card img {
+    width: 100%;
+  }
+
+  .recipe-info {
+    text-align: center;
+  }
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.recipe-card:hover .popup {
+  display: block;
+}
+
+/*Recipe Anchor Pages */
+
+.recipe-anchor-body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.recipe-anchor-header {
+  color: orange;
+  padding: 2em 0;
+  font-size: 25px;
+}
+
+.recipe-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1em auto;
+  border: 10px olivedrab;
+  border-style: ridge;
+}
+
+.recipe-details,
+.recipe-steps {
+  padding: 2em;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recipe-details > div {
+  width: 45%;
+  margin: 0 auto 1em auto;
+  border: 10px rgb(255, 155, 24);
+  border-style: dotted;
+}
+
+.recipe-details ul,
+.recipe-steps ol {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-details ul li,
+.recipe-steps ol li {
+  text-align: center;
+  margin: 1em 0;
+}
+
+h2 {
+  margin-top: 1em;
+  color: rgb(255, 51, 0);
+}
+
+hr {
+  margin: 2em 0;
+}
+
+.recipe-steps {
+  padding: 1em;
+  border: 10px rgb(255, 155, 24);
+  border-style: dotted;
+}
+
+@media (max-width: 768px) {
+  .recipe-details {
+    flex-direction: column;
+  }
+
+  .recipe-details > div {
+    width: 80%;
+  }
+}
+
+/*Feedback Form CSS*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header {
+  color: orange;
+  padding: 1em 0;
+  font-size: 25px;
+}
+
+.feedback-form-container {
+  margin: 2em auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.7em 1.5em;
+  background: #45a049;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: orange;
+}
+
+.hidden {
+  display: none;
+}
+
+#thank-you-message {
+  margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+  .feedback-form-container {
+    width: 90%;
+    padding: 1em 0.5em;
+  }
+
+  button {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  label {
+    font-size: 1em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}
